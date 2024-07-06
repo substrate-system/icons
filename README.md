@@ -8,6 +8,8 @@
 
 Icons as web components.
 
+See [a live demonstration](https://substrate-system.github.io/icons/).
+
 ## install
 
 ```sh
