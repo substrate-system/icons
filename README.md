@@ -1,4 +1,4 @@
-# template web component
+# icons
 ![tests](https://github.com/substrate-system/icons/actions/workflows/nodejs.yml/badge.svg)
 [![types](https://img.shields.io/npm/types/@substrate-system/icons?style=flat-square)](README.md)
 [![module](https://img.shields.io/badge/module-ESM%2FCJS-blue?style=flat-square)](README.md)
@@ -57,3 +57,10 @@ cp ./node_modules/@substrate-system/icons/dist/eye-regular.min.js ./public
 ```html
 <script type="module" src="./eye-regular.min.js"></script>
 ```
+
+## components
+
+A list of the components
+
+* `eye-regular`
+* `eye-slash`
