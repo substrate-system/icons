@@ -1,6 +1,5 @@
 {
-  "name": "@nichoth/example-webcomponent",
-  "private": true,
+  "name": "@substrate-system/icons",
   "type": "module",
   "version": "0.0.0",
   "main": "dist/index.js",
@@ -16,7 +15,7 @@
     "build-css:min": "postcss src/index.css --use cssnano postcss-nesting > dist/style.min.css",
     "build-cjs": "esbuild src/*.ts --format=cjs --keep-names --tsconfig=tsconfig.build.json --outdir=./dist --out-extension:.js=.cjs --sourcemap",
     "build-esm": "esbuild src/*.ts --format=esm --metafile=dist/meta.json --keep-names --tsconfig=tsconfig.build.json --outdir=./dist --sourcemap && tsc --emitDeclarationOnly --project tsconfig.build.json --outDir dist",
-    "build-esm:min": "esbuild ./src/*.ts --format=esm --keep-names --bundle --tsconfig=tsconfig.build.json --minify --outdir=./dist --sourcemap",
+    "build-esm:min": "esbuild ./src/*.ts --format=esm --keep-names --bundle --tsconfig=tsconfig.build.json --minify --out-extension:.js=.min.js --outdir=./dist --sourcemap",
     "build-example": "mkdir -p ./public && rm -rf ./public/* && vite --base=\"/example\" build",
     "build": "mkdir -p ./dist && rm -rf ./dist/* && npm run build-cjs && npm run build-esm && npm run build-esm:min && npm run build-css && npm run build-css:min",
     "start": "vite",
@@ -25,6 +24,7 @@
     "postversion": "git push --follow-tags && npm publish",
     "prepublishOnly": "npm run build"
   },
+  "dependencies": {},
   "devDependencies": {
     "@bicycle-codes/debug": "^0.6.8",
     "@bicycle-codes/dom": "^0.0.23",
@@ -61,5 +61,23 @@
     }
   },
   "author": "nichoth <nichoth@nichoth.com> (https://nichoth.com)",
-  "license": "MIT"
+  "license": "MIT",
+  "description": "![tests](https://github.com/substrate-system/icons/actions/workflows/nodejs.yml/badge.svg) [![types](https://img.shields.io/npm/types/@substrate-system/icons?style=flat-square)](README.md) [![module](https://img.shields.io/badge/module-ESM%2FCJS-blue?style=flat-square)](README.md) [![semantic versioning](https://img.shields.io/badge/semver-2.0.0-blue?logo=semver&style=flat-square)](https://semver.org/) [![license](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)",
+  "directories": {
+    "example": "example",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/substrate-system/icons.git"
+  },
+  "keywords": [
+    "icons",
+    "web",
+    "component"
+  ],
+  "bugs": {
+    "url": "https://github.com/substrate-system/icons/issues"
+  },
+  "homepage": "https://github.com/substrate-system/icons#readme"
 }

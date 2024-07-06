@@ -1,32 +1,50 @@
 # template web component
-![tests](https://github.com/nichoth/template-web-component/actions/workflows/nodejs.yml/badge.svg)
-[![types](https://img.shields.io/npm/types/@nichoth/catch-links?style=flat-square)](README.md)
+![tests](https://github.com/substrate-system/icons/actions/workflows/nodejs.yml/badge.svg)
+[![types](https://img.shields.io/npm/types/@substrate-system/icons?style=flat-square)](README.md)
 [![module](https://img.shields.io/badge/module-ESM%2FCJS-blue?style=flat-square)](README.md)
 [![semantic versioning](https://img.shields.io/badge/semver-2.0.0-blue?logo=semver&style=flat-square)](https://semver.org/)
+[![dependencies](https://img.shields.io/badge/dependencies-zero-brightgreen.svg?style=flat-square)](package.json)
 [![license](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 
-A template for vanilla web components.
+Icons as web components.
+
+## install
+
+```sh
+npm i -S @substrate-system/icons
+```
 
 ## use
-1. Use the template button in github. Or clone this then
-`rm -rf .git && git init`. Then `npm i && npm init`.
+This calls the global function `customElements.define`. Just import, then use
+the tag in your HTML.
 
-2. Edit the source code in `src/index.ts`.
+### JS
+```js
+import '@substrate-system/icons/eye-regular'
+```
 
-3. Delete either `.github/workflows/gh-pages-docs.yml` or `.github/workflows/gh-pages.yml`, depending on whether you want to deploy an example or docs to github pages.
+### HTML
+```html
+<div>
+    <eye-regular></eye-regular>
+</div>
+```
 
-## featuring
+### pre-built HTML
+This package exposes minified JS files too. Copy them to a location that is
+accessible to your web server, then use the tags in HTML.
 
-* compile the source to both ESM and CJS format, and put compiled files in `dist`.
-* ignore `dist` and `*.js` in git, but don't ignore them in npm. That way we
-  don't commit any compiled code to git, but it is available to consumers.
-* use npm's `prepublishOnly` hook to compile the code before publishing to npm.
-* use [exports](./package.json#L41) field in `package.json` to make sure the right format is used
-  by consumers.
-* `preversion` npm hook -- lint
-* `postversion` npm hook -- `git push --follow-tags && npm publish`
-* eslint -- `npm run lint`
-* tests run in a browser environment via `tape-run` -- see [`npm test`](./package.json#L12).
-  Includes `tap` testing tools -- [tapzero](https://github.com/bicycle-codes/tapzero)
-  and [tap-spec](https://www.npmjs.com/package/tap-spec)
-* CI via github actions
+#### copy
+```sh
+cp ./node_modules/@substrate-system/icons/dist/eye-regular.min.js ./public/eye-regular.js
+```
+
+### ESM
+```js
+import '@substrate-system/icons/eye-regular'
+```
+
+### Common JS
+```js
+require('@substrate-system/icons/eye-regular')
+```
