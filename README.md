@@ -14,6 +14,20 @@ Icons as web components.
 npm i -S @substrate-system/icons
 ```
 
+## API
+
+This exposes ESM and common JS via [package.json `exports` field](https://nodejs.org/api/packages.html#exports).
+
+### ESM
+```js
+import '@substrate-system/icons/eye-regular'
+```
+
+### Common JS
+```js
+require('@substrate-system/icons/eye-regular')
+```
+
 ## use
 This calls the global function `customElements.define`. Just import, then use
 the tag in your HTML.
@@ -30,21 +44,16 @@ import '@substrate-system/icons/eye-regular'
 </div>
 ```
 
-### pre-built HTML
+### pre-built JS
 This package exposes minified JS files too. Copy them to a location that is
-accessible to your web server, then use the tags in HTML.
+accessible to your web server, then link to them in HTML.
 
 #### copy
 ```sh
-cp ./node_modules/@substrate-system/icons/dist/eye-regular.min.js ./public/eye-regular.js
+cp ./node_modules/@substrate-system/icons/dist/eye-regular.min.js ./public
 ```
 
-### ESM
-```js
-import '@substrate-system/icons/eye-regular'
-```
-
-### Common JS
-```js
-require('@substrate-system/icons/eye-regular')
+#### HTML
+```html
+<script type="module" src="./eye-regular.min.js"></script>
 ```
