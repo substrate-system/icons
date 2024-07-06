@@ -1,0 +1,16 @@
+eye-slash, eye-regular {
+    height: 2rem;
+    width: 2rem;
+    display: block;
+}
+
+.icons-demo {
+    display: flex;
+    gap: 1rem;
+
+    &>div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
