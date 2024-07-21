@@ -1,7 +1,8 @@
-eye-slash, eye-regular {
+eye-slash, eye-regular, edit-square, edit-pencil {
     height: 2rem;
     width: 2rem;
     display: block;
+    margin-bottom: 1rem;
 }
 
 .icons-demo {

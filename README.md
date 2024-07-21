@@ -64,8 +64,7 @@ cp ./node_modules/@substrate-system/icons/dist/eye-regular.min.js ./public
 
 A list of the components
 
-* `eye-regular` ![Regular eye](image-3.png)
-
----
-
-* `eye-slash` ![Eye with slash](image-2.png)
+* `@substrate-system/icons/eye-regular`
+* `@substrate-system/icons/eye-slash`
+* `@substrate-system/icons/edit-square`
+* `@substrate-system/icons/edit-pencil`
