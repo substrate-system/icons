@@ -68,3 +68,7 @@ A list of the components
 * `@substrate-system/icons/eye-slash`
 * `@substrate-system/icons/edit-square`
 * `@substrate-system/icons/edit-pencil`
+
+## credits
+
+These icons come from the free SVG files of [fontawesome](https://fontawesome.com/).
