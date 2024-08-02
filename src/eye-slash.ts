@@ -1,6 +1,6 @@
 export class EyeSlash extends HTMLElement {
-    connectedCallback () {
-        if (this.innerHTML) return
+    constructor () {
+        super()
         this.innerHTML = `<svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 640 512"
