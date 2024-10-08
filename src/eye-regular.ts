@@ -9,3 +9,7 @@ export class EyeRegular extends HTMLElement {
         </svg>`
     }
 }
+
+export function register () {
+    customElements.define('eye-regular', EyeRegular)
+}
