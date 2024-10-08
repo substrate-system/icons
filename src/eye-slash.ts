@@ -1,6 +1,5 @@
 export class EyeSlash extends HTMLElement {
-    constructor () {
-        super()
+    connectedCallback () {
         this.innerHTML = `<svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 640 512"
@@ -10,5 +9,3 @@ export class EyeSlash extends HTMLElement {
         </svg>`
     }
 }
-
-customElements.define('eye-slash', EyeSlash)
