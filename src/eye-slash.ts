@@ -9,3 +9,7 @@ export class EyeSlash extends HTMLElement {
         </svg>`
     }
 }
+
+export function register () {
+    customElements.define('eye-slash', EyeSlash)
+}

@@ -6,3 +6,7 @@ export class EditPencil extends HTMLElement {
         </svg>`
     }
 }
+
+export function register () {
+    customElements.define('edit-pencil', EditPencil)
+}

@@ -8,6 +8,8 @@
 
 Icons as web components.
 
+This package **does not register component names**. See [the *use* section](#use) for more information.
+
 See [a live demonstration](https://substrate-system.github.io/icons/).
 
 <!-- toc -->
@@ -17,6 +19,16 @@ See [a live demonstration](https://substrate-system.github.io/icons/).
 ```sh
 npm i -S @substrate-system/icons
 ```
+
+## components
+
+Visible in the [src folder](./src/). The filename corresponds to the default component name.
+
+* `@substrate-system/icons/eye-regular`
+* `@substrate-system/icons/eye-slash`
+* `@substrate-system/icons/edit-square`
+* `@substrate-system/icons/edit-pencil`
+
 
 ## API
 
@@ -33,13 +45,29 @@ require('@substrate-system/icons/eye-regular')
 ```
 
 ## use
-
-In the interest of interoperability, **we do not register any components**, you will need to call ``:
+In the interest of interoperability, **we do not register any components**, you will need to call `customElements.define('comonent-name', ComponentClass)` yourself:
 
 ```js
 import { EditSquare } from '@substrate-sustem/icons'
 
-customElements.define('edit-square', EditSquare)
+customElements.define('component-name', EditSquare)
+```
+
+Or call the helper function, `regiser`:
+```js
+import { register } from '@substrate-system/icons'
+
+// this will load and register all components,
+// using the default component names
+register()
+```
+
+Or register components individually, with the default names:
+```js
+import { regiser } from '@substrate-system/icons/edit-pencil'
+
+// this will register with the default component name, 'edit-pencil'
+register()
 ```
 
 ### JS
@@ -67,15 +95,6 @@ cp ./node_modules/@substrate-system/icons/dist/eye-regular.min.js ./public
 ```html
 <script type="module" src="./eye-regular.min.js"></script>
 ```
-
-## components
-
-Visible in the [src folder](./src/).
-
-* `@substrate-system/icons/eye-regular`
-* `@substrate-system/icons/eye-slash`
-* `@substrate-system/icons/edit-square`
-* `@substrate-system/icons/edit-pencil`
 
 ## credits
 

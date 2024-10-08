@@ -7,3 +7,6 @@ export class EditSquare extends HTMLElement {
     }
 }
 
+export function register () {
+    customElements.define('edit-square', EditSquare)
+}
