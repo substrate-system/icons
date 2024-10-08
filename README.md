@@ -14,6 +14,19 @@ See [a live demonstration](https://substrate-system.github.io/icons/).
 
 <!-- toc -->
 
+- [install](#install)
+- [components](#components)
+- [API](#api)
+  * [ESM](#esm)
+  * [Common JS](#common-js)
+- [use](#use)
+  * [JS](#js)
+  * [HTML](#html)
+  * [pre-built JS](#pre-built-js)
+- [credits](#credits)
+
+<!-- tocstop -->
+
 ## install
 
 ```sh
