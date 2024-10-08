@@ -10,6 +10,8 @@ Icons as web components.
 
 See [a live demonstration](https://substrate-system.github.io/icons/).
 
+<!-- toc -->
+
 ## install
 
 ```sh
@@ -31,8 +33,14 @@ require('@substrate-system/icons/eye-regular')
 ```
 
 ## use
-This calls the global function `customElements.define`. Just import, then use
-the tag in your HTML.
+
+In the interest of interoperability, **we do not register any components**, you will need to call ``:
+
+```js
+import { EditSquare } from '@substrate-sustem/icons'
+
+customElements.define('edit-square', EditSquare)
+```
 
 ### JS
 ```js
@@ -62,7 +70,7 @@ cp ./node_modules/@substrate-system/icons/dist/eye-regular.min.js ./public
 
 ## components
 
-A list of the components
+Visible in the [src folder](./src/).
 
 * `@substrate-system/icons/eye-regular`
 * `@substrate-system/icons/eye-slash`
