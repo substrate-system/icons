@@ -10,7 +10,9 @@ Icons as web components.
 
 This package **does not register component names**. See [the *use* section](#use) for more information.
 
-See [a live demonstration](https://substrate-system.github.io/icons/).
+**See [a live demonstration](https://substrate-system.github.io/icons/)**.
+
+<details><summary><h2>Contents</h2></summary>
 
 <!-- toc -->
 
@@ -26,6 +28,8 @@ See [a live demonstration](https://substrate-system.github.io/icons/).
 - [credits](#credits)
 
 <!-- tocstop -->
+
+</details>
 
 ## install
 
