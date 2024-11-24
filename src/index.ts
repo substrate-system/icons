@@ -10,7 +10,7 @@ export * as eyeSlash from './eye-slash.js'
 /**
  * Register everything, using default names.
  */
-export function regiser () {
+export function register () {
     pencil()
     square()
     eye()
