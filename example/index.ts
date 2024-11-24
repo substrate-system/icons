@@ -1,8 +1,7 @@
-import '../src/eye-regular.js'
-import '../src/eye-slash.js'
-import '../src/edit-square.js'
-import '../src/edit-pencil.js'
+import { register } from '../src/index.js'
 import './index.css'
+
+register()
 
 document.body.innerHTML += `
     <div class="icons-demo">
