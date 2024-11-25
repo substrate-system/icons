@@ -87,6 +87,8 @@ import { regiser } from '@substrate-system/icons/edit-pencil'
 register()
 ```
 
+See [the `isRegistered`](https://github.com/substrate-system/web-component#isregistered) helper function in `@substrate/web-component` for help with name collisions.
+
 ### JS
 ```js
 import '@substrate-system/icons/eye-regular'
