@@ -13,7 +13,7 @@ export class EditPencil extends HTMLElement {
     connectedCallback () {
         const title = (this.getAttribute('title') || 'Edit')
         this.innerHTML = `<svg role="image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-            aria-lavelledby="${kebabCase(title)}"
+            aria-labelledby="${kebabCase(title)}"
         >
             <title id="${kebabCase(title)}">${title}</title>
             <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
