@@ -94,10 +94,13 @@ See [the `isRegistered`](https://github.com/substrate-system/web-component#isreg
 import '@substrate-system/icons/eye-regular'
 ```
 
+### Attributes
+Pass in a `title` attribute to change the `svg` title. If `title` is omitted, it will render with a default `title`.
+
 ### HTML
 ```html
 <div>
-    <eye-regular></eye-regular>
+    <eye-regular title="See something"></eye-regular>
 </div>
 ```
 
@@ -115,6 +118,10 @@ cp ./node_modules/@substrate-system/icons/dist/eye-regular.min.js ./public
 <script type="module" src="./eye-regular.min.js"></script>
 ```
 
-## credits
+## See Also
+
+* [Accessible SVG Icons](https://css-tricks.com/accessible-svg-icons/)
+
+## Credits
 
 These icons come from the free SVG files of [fontawesome](https://fontawesome.com/).
