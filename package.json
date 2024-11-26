@@ -83,5 +83,8 @@
   "bugs": {
     "url": "https://github.com/substrate-system/icons/issues"
   },
-  "homepage": "https://github.com/substrate-system/icons#readme"
+  "homepage": "https://github.com/substrate-system/icons#readme",
+  "dependencies": {
+    "@substrate-system/kebab-case": "^0.0.0"
+  }
 }
