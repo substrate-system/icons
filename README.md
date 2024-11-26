@@ -23,9 +23,11 @@ This package **does not register component names**. See [the *use* section](#use
   * [Common JS](#common-js)
 - [use](#use)
   * [JS](#js)
+  * [Attributes](#attributes)
   * [HTML](#html)
   * [pre-built JS](#pre-built-js)
-- [credits](#credits)
+- [See Also](#see-also)
+- [Credits](#credits)
 
 <!-- tocstop -->
 
