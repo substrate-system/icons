@@ -63,13 +63,15 @@ require('@substrate-system/icons/eye-regular')
 ```
 
 ## use
-In the interest of interoperability, **we do not register any components**, you will need to call `customElements.define('comonent-name', ComponentClass)` yourself:
+In the interest of interoperability, **we do not define any components**, you will need to call `customElements.define('comonent-name', ComponentClass)` yourself:
 
 ```js
 import { EditSquare } from '@substrate-sustem/icons'
 
 customElements.define('component-name', EditSquare)
 ```
+
+### register
 
 Or call the helper function, `regiser`:
 ```js
