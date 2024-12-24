@@ -8,7 +8,7 @@ export class EyeSlash extends HTMLElement {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 640 512"
             role="image"
-            aria-labelledby="${kebabCase(title)}"
+            aria-label="${kebabCase(title)}"
         >
             <title id=${kebabCase(title)}>${title}</title>
             <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
