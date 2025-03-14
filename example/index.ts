@@ -24,5 +24,10 @@ document.body.innerHTML += `
             <edit-pencil></edit-pencil>
             edit pencil
         </div>
+
+        <div>
+            <new-tab></new-tab>
+            new tab
+        </div>
     </div>
 `
