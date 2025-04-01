@@ -19,10 +19,11 @@ This package **does not register component names**. See
 
 - [install](#install)
 - [components](#components)
-- [API](#api)
+- [Modules](#modules)
   * [ESM](#esm)
   * [Common JS](#common-js)
 - [use](#use)
+  * [tag names](#tag-names)
   * [register](#register)
   * [JS](#js)
   * [Attributes](#attributes)
