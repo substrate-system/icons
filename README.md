@@ -3,11 +3,12 @@
 [![types](https://img.shields.io/npm/types/@substrate-system/icons?style=flat-square)](README.md)
 [![module](https://img.shields.io/badge/module-ESM%2FCJS-blue?style=flat-square)](README.md)
 [![semantic versioning](https://img.shields.io/badge/semver-2.0.0-blue?logo=semver&style=flat-square)](https://semver.org/)
-[![license](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
+[![license](https://img.shields.io/badge/license-Polyform_Small_Business-249fbc?style=flat-square)](LICENSE)
 
 Icons as web components.
 
-This package **does not register component names**. See [the *use* section](#use) for more information.
+This package **does not register component names**. See
+[the *use* section](#use) for more information.
 
 **See [a live demonstration](https://substrate-system.github.io/icons/)**.
 
@@ -41,7 +42,8 @@ npm i -S @substrate-system/icons
 
 ## components
 
-Visible in the [src folder](./src/). The filename corresponds to the default component name.
+Visible in the [src folder](./src/). The filename corresponds to the default
+component name.
 
 * `@substrate-system/icons/eye-regular`
 * `@substrate-system/icons/eye-slash`
@@ -49,7 +51,7 @@ Visible in the [src folder](./src/). The filename corresponds to the default com
 * `@substrate-system/icons/edit-pencil`
 
 
-## API
+## Modules
 
 This exposes ESM and common JS via [package.json `exports` field](https://nodejs.org/api/packages.html#exports).
 
@@ -64,12 +66,26 @@ require('@substrate-system/icons/eye-regular')
 ```
 
 ## use
-In the interest of interoperability, **we do not define any components**, you will need to call `customElements.define('comonent-name', ComponentClass)` yourself:
+In the interest of interoperability, **we do not define any components**, you
+will need to call `customElements.define('comonent-name', ComponentClass)`
+yourself:
 
 ```js
 import { EditSquare } from '@substrate-sustem/icons'
 
 customElements.define('component-name', EditSquare)
+```
+
+### tag names
+The default tag name is exposed as `TAG_NAME` static property on each class.
+You can override this property to set something custom.
+```js
+import { register, EditSquare } from '@substrate-system/icons/eye-regular'
+
+EditSquare.TAG_NAME = 'exmaple-name'
+register()
+
+// now use it like `<example-name />`
 ```
 
 ### register
@@ -91,7 +107,8 @@ import { regiser } from '@substrate-system/icons/edit-pencil'
 register()
 ```
 
-See [the `isRegistered`](https://github.com/substrate-system/web-component#isregistered) helper function in `@substrate/web-component` for help with name collisions.
+See [the `isRegistered`](https://github.com/substrate-system/web-component#isregistered)
+helper function in `@substrate/web-component` for help with name collisions.
 
 ### JS
 ```js
@@ -99,7 +116,8 @@ import '@substrate-system/icons/eye-regular'
 ```
 
 ### Attributes
-Pass in a `title` attribute to change the `svg` title. If `title` is omitted, it will render with a default `title`.
+Pass in a `title` attribute to change the `svg` title. If `title` is omitted,
+it will render with a default `title`.
 
 ### HTML
 ```html
