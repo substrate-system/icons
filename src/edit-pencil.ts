@@ -2,6 +2,7 @@ import { kebabCase } from '@substrate-system/kebab-case'
 
 export class EditPencil extends HTMLElement {
     static observedAttributes:string[] = ['title']
+    static TAG_NAME = 'edit-pencil'
 
     /**
      * Only watching for 'title'.
@@ -23,5 +24,5 @@ export class EditPencil extends HTMLElement {
 }
 
 export function register () {
-    customElements.define('edit-pencil', EditPencil)
+    customElements.define(EditPencil.TAG_NAME, EditPencil)
 }

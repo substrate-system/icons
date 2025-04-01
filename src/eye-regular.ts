@@ -1,6 +1,8 @@
 import { kebabCase } from '@substrate-system/kebab-case'
 
 export class EyeRegular extends HTMLElement {
+    static TAG_NAME = 'eye-regular'
+
     connectedCallback () {
         const title = this.getAttribute('title') || 'Show'
 
@@ -18,5 +20,5 @@ export class EyeRegular extends HTMLElement {
 }
 
 export function register () {
-    customElements.define('eye-regular', EyeRegular)
+    customElements.define(EyeRegular.TAG_NAME, EyeRegular)
 }

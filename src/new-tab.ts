@@ -2,6 +2,7 @@ import { kebabCase } from '@substrate-system/kebab-case'
 
 export class NewTab extends HTMLElement {
     static observedAttributes:string[] = ['title']
+    static TAG_NAME = 'new-tab'
 
     /**
      * Only watching for 'title'.
@@ -25,5 +26,5 @@ export class NewTab extends HTMLElement {
 }
 
 export function register () {
-    customElements.define('new-tab', NewTab)
+    customElements.define(NewTab.TAG_NAME, NewTab)
 }

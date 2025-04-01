@@ -1,6 +1,8 @@
 import { kebabCase } from '@substrate-system/kebab-case'
 
 export class EyeSlash extends HTMLElement {
+    static TAG_NAME = 'eye-slash'
+
     connectedCallback () {
         const title = this.getAttribute('title') || 'Hide'
 
@@ -18,5 +20,5 @@ export class EyeSlash extends HTMLElement {
 }
 
 export function register () {
-    customElements.define('eye-slash', EyeSlash)
+    customElements.define(EyeSlash.TAG_NAME, EyeSlash)
 }

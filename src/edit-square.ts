@@ -1,6 +1,8 @@
 import { kebabCase } from '@substrate-system/kebab-case'
 
 export class EditSquare extends HTMLElement {
+    static TAG_NAME = 'edit-square'
+
     connectedCallback () {
         const title = this.getAttribute('title') || 'Edit'
 
@@ -15,5 +17,5 @@ export class EditSquare extends HTMLElement {
 }
 
 export function register () {
-    customElements.define('edit-square', EditSquare)
+    customElements.define(EditSquare.TAG_NAME, EditSquare)
 }
