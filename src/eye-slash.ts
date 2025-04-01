@@ -7,6 +7,7 @@ export class EyeSlash extends HTMLElement {
         const title = this.getAttribute('title') || 'Hide'
 
         this.innerHTML = `<svg
+            class="icon eye-slash"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 640 512"
             role="image"

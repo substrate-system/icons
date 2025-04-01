@@ -31,6 +31,12 @@
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
+    "./css": [
+      "./dist/style.css"
+    ],
+    "./css/min": [
+      "./dist/style.min.css"
+    ],
     "./css/*": {
       "import": "./dist/*.css"
     },

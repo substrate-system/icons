@@ -7,6 +7,7 @@ export class EyeRegular extends HTMLElement {
         const title = this.getAttribute('title') || 'Show'
 
         this.innerHTML = `<svg
+            class="icon eye-regular"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 576 512"
             role="image"

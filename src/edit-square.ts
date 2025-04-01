@@ -6,7 +6,7 @@ export class EditSquare extends HTMLElement {
     connectedCallback () {
         const title = this.getAttribute('title') || 'Edit'
 
-        this.innerHTML = `<svg role="image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+        this.innerHTML = `<svg class="icon edit-square" role="image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
             aria-label="${kebabCase(title).toLocaleUpperCase()}"
         >
             <title id="${kebabCase(title).toLocaleLowerCase()}">${title}</title>
