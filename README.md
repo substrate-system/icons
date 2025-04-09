@@ -44,8 +44,11 @@ npm i -S @substrate-system/icons
 
 ## components
 
-Visible in the [src folder](./src/). The filename corresponds to the default
+Visible in the [src folder](./src/), the filename corresponds to the default
 component name.
+
+[See the demo page](https://substrate-system.github.io/icons/) for a list of
+all components with names.
 
 * `@substrate-system/icons/eye-regular`
 * `@substrate-system/icons/eye-slash`
