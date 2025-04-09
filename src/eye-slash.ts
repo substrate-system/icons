@@ -2,8 +2,33 @@ import { kebabCase } from '@substrate-system/kebab-case'
 
 export class EyeSlash extends HTMLElement {
     static TAG_NAME = 'eye-slash'
+    _title:string|null
+
+    constructor () {
+        super()
+        this._title = this.getAttribute('title')
+    }
+
+    /**
+     * Only watching for 'title'.
+     */
+    attributeChangedCallback (_name, _oldValue, newValue) {
+        this._title = newValue
+        this.render()
+    }
 
     connectedCallback () {
+        const title = this.getAttribute('title')
+        if (title === undefined || title === null) {
+            this._title = 'Save'
+        } else {
+            this._title = title
+        }
+
+        this.render()
+    }
+
+    render () {
         const title = this.getAttribute('title') || 'Hide'
 
         this.innerHTML = `<svg

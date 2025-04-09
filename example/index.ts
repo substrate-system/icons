@@ -29,5 +29,10 @@ document.body.innerHTML += `
             <new-tab></new-tab>
             new tab
         </div>
+
+        <div>
+            <save-cloud title="Save"></save-cloud>
+            save cloud
+        </div>
     </div>
 `
