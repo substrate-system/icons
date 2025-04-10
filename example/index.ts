@@ -1,5 +1,6 @@
 import { register } from '../src/index.js'
 import './index.css'
+import '../src/index.css'
 
 register()
 
@@ -31,8 +32,13 @@ document.body.innerHTML += `
         </div>
 
         <div>
-            <save-cloud title="Save"></save-cloud>
+            <save-cloud title="the save title"></save-cloud>
             save cloud
+        </div>
+
+        <div>
+            <log-out title="sign out"></log-out>
+            log out
         </div>
     </div>
 `

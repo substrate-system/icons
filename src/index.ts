@@ -4,6 +4,7 @@ import { register as eye } from './eye-regular.js'
 import { register as eyeSlash } from './eye-slash.js'
 import { register as newTab } from './new-tab.js'
 import { register as saveCloud } from './save-cloud.js'
+import { register as logOut } from './log-out.js'
 export * as pencil from './edit-pencil.js'
 export * as square from './edit-square.js'
 export * as eye from './eye-regular.js'
@@ -21,4 +22,5 @@ export function register () {
     eyeSlash()
     newTab()
     saveCloud()
+    logOut()
 }

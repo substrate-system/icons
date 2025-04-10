@@ -1,6 +1,11 @@
-eye-slash, eye-regular, edit-square, edit-pencil, new-tab, save-cloud {
+/* eye-slash, eye-regular, edit-square, edit-pencil, new-tab, save-cloud {
     height: 2rem;
     width: 2rem;
+    display: block;
+    margin-bottom: 1rem;
+} */
+
+.icon {
     display: block;
     margin-bottom: 1rem;
 }

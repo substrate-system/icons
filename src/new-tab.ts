@@ -35,6 +35,7 @@ export class NewTab extends HTMLElement {
 
         this.innerHTML = `
             <svg role="image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                class="icon new-tab"
                 aria-labelledby="${kebabTitle}"
             >
                 <title id="${kebabTitle}">${this._title}</title>
