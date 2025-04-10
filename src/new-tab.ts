@@ -3,11 +3,11 @@ import { kebabCase } from '@substrate-system/kebab-case'
 export class NewTab extends HTMLElement {
     static observedAttributes:string[] = ['title']
     static TAG_NAME = 'new-tab'
-    _title:string|null
+    _title:string
 
     constructor () {
         super()
-        this._title = this.getAttribute('title')
+        this._title = this.getAttribute('title') || 'New Tab'
     }
 
     /**
@@ -30,7 +30,6 @@ export class NewTab extends HTMLElement {
     }
 
     render () {
-        if (!this._title) return
         const kebabTitle = kebabCase(this._title)
 
         this.innerHTML = `

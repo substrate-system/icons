@@ -4,11 +4,11 @@ export class EditPencil extends HTMLElement {
     static observedAttributes:string[] = ['title']
     static TAG_NAME = 'edit-pencil'
 
-    _title:string|null
+    _title:string
 
     constructor () {
         super()
-        this._title = this.getAttribute('title')
+        this._title = this.getAttribute('title') || 'Edit'
     }
 
     /**
@@ -22,7 +22,7 @@ export class EditPencil extends HTMLElement {
     connectedCallback () {
         const title = this.getAttribute('title')
         if (title === undefined || title === null) {
-            this._title = 'Save'
+            this._title = 'Edit'
         } else {
             this._title = title
         }

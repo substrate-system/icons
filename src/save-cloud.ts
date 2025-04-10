@@ -3,11 +3,11 @@ import { kebabCase } from '@substrate-system/kebab-case'
 export class SaveCloud extends HTMLElement {
     static observedAttributes:string[] = ['title']
     static TAG_NAME = 'save-cloud'
-    _title:string|null
+    _title:string
 
     constructor () {
         super()
-        this._title = this.getAttribute('title')
+        this._title = this.getAttribute('title') || 'Save'
     }
 
     /**
@@ -30,7 +30,6 @@ export class SaveCloud extends HTMLElement {
     }
 
     render () {
-        if (!this._title) throw new Error('not title')
         const kebabTitle = kebabCase(this._title)
 
         this.innerHTML = `

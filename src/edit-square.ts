@@ -2,11 +2,11 @@ import { kebabCase } from '@substrate-system/kebab-case'
 
 export class EditSquare extends HTMLElement {
     static TAG_NAME = 'edit-square'
-    _title:string|null
+    _title:string
 
     constructor () {
         super()
-        this._title = this.getAttribute('title')
+        this._title = this.getAttribute('title') || 'Edit'
     }
 
     /**
@@ -20,7 +20,7 @@ export class EditSquare extends HTMLElement {
     connectedCallback () {
         const title = this.getAttribute('title')
         if (title === undefined || title === null) {
-            this._title = 'Save'
+            this._title = 'Edit'
         } else {
             this._title = title
         }
@@ -29,7 +29,6 @@ export class EditSquare extends HTMLElement {
     }
 
     render () {
-        if (!this._title) return
         const kebabTitle = kebabCase(this._title)
 
         this.innerHTML = `<svg

@@ -2,11 +2,11 @@ import { kebabCase } from '@substrate-system/kebab-case'
 
 export class EyeRegular extends HTMLElement {
     static TAG_NAME = 'eye-regular'
-    _title:string|null
+    _title:string
 
     constructor () {
         super()
-        this._title = this.getAttribute('title')
+        this._title = this.getAttribute('title') || 'See'
     }
 
     /**
@@ -38,7 +38,7 @@ export class EyeRegular extends HTMLElement {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 576 512"
             role="image"
-            aria-label="${kebabTitle}"
+            aria-labelledby="${kebabTitle}"
         >
             <title id=${kebabTitle}>${title}</title>
             <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->

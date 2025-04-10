@@ -3,11 +3,11 @@ import { kebabCase } from '@substrate-system/kebab-case'
 export class LogOut extends HTMLElement {
     static observedAttributes:string[] = ['title']
     static TAG_NAME = 'log-out'
-    _title:string|null
+    _title:string
 
     constructor () {
         super()
-        this._title = this.getAttribute('title')
+        this._title = this.getAttribute('title') || 'Logout'
     }
 
     /**
@@ -30,7 +30,6 @@ export class LogOut extends HTMLElement {
     }
 
     render () {
-        if (!this._title) return
         const kebabTitle = kebabCase(this._title)
 
         this.innerHTML = `<svg role="image" xmlns="http://www.w3.org/2000/svg"

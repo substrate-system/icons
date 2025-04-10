@@ -2,11 +2,11 @@ import { kebabCase } from '@substrate-system/kebab-case'
 
 export class EyeSlash extends HTMLElement {
     static TAG_NAME = 'eye-slash'
-    _title:string|null
+    _title:string
 
     constructor () {
         super()
-        this._title = this.getAttribute('title')
+        this._title = this.getAttribute('title') || 'Hide'
     }
 
     /**
@@ -20,7 +20,7 @@ export class EyeSlash extends HTMLElement {
     connectedCallback () {
         const title = this.getAttribute('title')
         if (title === undefined || title === null) {
-            this._title = 'Save'
+            this._title = 'Hide'
         } else {
             this._title = title
         }
@@ -29,14 +29,14 @@ export class EyeSlash extends HTMLElement {
     }
 
     render () {
-        const title = this.getAttribute('title') || 'Hide'
+        const title = this._title
 
         this.innerHTML = `<svg
             class="icon eye-slash"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 640 512"
             role="image"
-            aria-label="${kebabCase(title)}"
+            aria-labelledby="${kebabCase(title)}"
         >
             <title id=${kebabCase(title)}>${title}</title>
             <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
