@@ -82,13 +82,23 @@ import { EditSquare } from '@substrate-sustem/icons'
 customElements.define('component-name', EditSquare)
 ```
 
+### SSR
+Server-side render by importing from the path `/ssr`.
+
+```js
+import { githubLogo } from '@substrate-system/icons/ssr'
+
+// this is a function that returns a string
+const html = githubLogo()
+```
+
 ### tag names
-The default tag name is exposed as `TAG_NAME` static property on each class.
+The default tag name is exposed as `TAG` static property on each class.
 You can override this property to set something custom.
 ```js
 import { register, EditSquare } from '@substrate-system/icons/eye-regular'
 
-EditSquare.TAG_NAME = 'exmaple-name'
+EditSquare.TAG = 'exmaple-name'
 register()
 
 // now use it like `<example-name />`

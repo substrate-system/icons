@@ -31,6 +31,10 @@
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
+    "./ssr": {
+      "import": "./dist/ssr.js",
+      "require": "./dst/ssr.cjs"
+    },
     "./css": [
       "./dist/style.css"
     ],
