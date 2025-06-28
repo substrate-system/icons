@@ -25,3 +25,5 @@ export const githubLogo = function ():string {
         </github-logo>` :
         html
 }
+
+githubLogo.TAG = 'github-logo'

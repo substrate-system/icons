@@ -1,5 +1,12 @@
 import { githubLogo } from './ssr.js'
 
+// for docuement.querySelector
+declare global {
+    interface HTMLElementTagNameMap {
+        'github-logo': GithubLogo
+    }
+}
+
 export class GithubLogo extends HTMLElement {
     static TAG = 'github-logo'
 
