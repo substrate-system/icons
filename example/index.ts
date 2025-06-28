@@ -40,5 +40,10 @@ document.body.innerHTML += `
             <log-out title="sign out"></log-out>
             log out
         </div>
+
+        <div>
+            <github-logo title="github"></github-logo>
+            Github Logo
+        </div>
     </div>
 `

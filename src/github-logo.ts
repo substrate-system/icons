@@ -10,6 +10,11 @@ declare global {
 export class GithubLogo extends HTMLElement {
     static TAG = 'github-logo'
 
+    constructor () {
+        super()
+        this.classList.add('icon')
+    }
+
     connectedCallback () {
         if (!this.innerHTML) {
             this.innerHTML = this.render()

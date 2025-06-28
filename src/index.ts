@@ -1,3 +1,4 @@
+import { register as github } from './github-logo.js'
 import { register as pencil } from './edit-pencil.js'
 import { register as square } from './edit-square.js'
 import { register as eye } from './eye-regular.js'
@@ -11,6 +12,7 @@ export * as eye from './eye-regular.js'
 export * as eyeSlash from './eye-slash.js'
 export * as newTab from './new-tab.js'
 export * as SaveCloud from './save-cloud.js'
+export * as GithubLogo from './github-logo.js'
 
 /**
  * Register everything, using default names.
@@ -23,4 +25,5 @@ export function register () {
     newTab()
     saveCloud()
     logOut()
+    github()
 }
