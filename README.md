@@ -24,6 +24,7 @@ This package **does not register component names**. See
   * [ESM](#esm)
   * [Common JS](#common-js)
 - [use](#use)
+  * [SSR](#ssr)
   * [tag names](#tag-names)
   * [register](#register)
   * [JS](#js)
