@@ -3,7 +3,7 @@ import { waitFor } from '@bicycle-codes/dom'
 import '../src/eye-regular.js'
 import '../src/eye-slash.js'
 
-test('example', async t => {
+test('icons', async t => {
     document.body.innerHTML += `<div class="icons-demo">
         <div>
             <eye-regular></eye-regular>

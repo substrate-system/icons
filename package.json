@@ -10,15 +10,18 @@
   "scripts": {
     "lint": "eslint \"./**/*.{ts,js}\"",
     "build-tests": "esbuild test/index.ts --target=es2020 --bundle --keep-names > test/test-bundle.js",
-    "test": "npm run lint && npm run build && npm run build-tests && npm run test-tape-run",
+    "test": "npm run build && npm run build-tests && npm run test-tape-run && npm run test-node",
+    "test-node": "esbuild --bundle ./test/node.ts | node | tap-spec",
     "test-tape-run": "cat test/index.html | tape-run --input=html --static=test | tap-spec",
     "build-css": "postcss src/index.css --use postcss-nesting > dist/style.css",
     "build-css:min": "postcss src/index.css --use cssnano postcss-nesting > dist/style.min.css",
     "build-cjs": "esbuild src/*.ts --format=cjs --keep-names --tsconfig=tsconfig.build.json --outdir=./dist --out-extension:.js=.cjs --sourcemap",
     "build-esm": "esbuild src/*.ts --format=esm --metafile=dist/meta.json --keep-names --tsconfig=tsconfig.build.json --outdir=./dist --sourcemap && tsc --emitDeclarationOnly --project tsconfig.build.json --outDir dist",
+    "build-ssr": "mkdir -p ./dist/render && esbuild ./src/render/*.ts --format=esm --keep-names --tsconfig=tsconfig.build.json --outdir=./dist/render --sourcemap",
+    "build-ssr:cjs": "mkdir -p ./dist/render && esbuild ./src/render/*.ts --format=cjs --keep-names --tsconfig=tsconfig.build.json --out-extension:.js=.cjs --outdir=./dist/render --sourcemap",
     "build-esm:min": "esbuild ./src/*.ts --format=esm --keep-names --bundle --tsconfig=tsconfig.build.json --minify --out-extension:.js=.min.js --outdir=./dist --sourcemap",
     "build-example": "mkdir -p ./public && rm -rf ./public/* && vite --base=\"/icons\" build",
-    "build": "mkdir -p ./dist && rm -rf ./dist/* && npm run build-cjs && npm run build-esm && npm run build-esm:min && npm run build-css && npm run build-css:min",
+    "build": "mkdir -p ./dist && rm -rf ./dist/* && npm run build-cjs && npm run build-esm && npm run build-esm:min && npm run build-css && npm run build-css:min && npm run build-ssr && npm run build-ssr:cjs",
     "start": "vite",
     "toc": "markdown-toc --maxdepth 3 -i README.md",
     "preversion": "npm run lint",
@@ -31,9 +34,13 @@
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
-    "./ssr": {
-      "import": "./dist/ssr.js",
-      "require": "./dst/ssr.cjs"
+    "./render": {
+      "import": "./dist/render/index.js",
+      "require": "./dist/render/index.cjs"
+    },
+    "./render/*": {
+      "import": "./dist/render/*.js",
+      "require": "./dist/render/*.cjs"
     },
     "./css": [
       "./dist/style.css"
@@ -55,10 +62,13 @@
       ]
     }
   },
+  "dependencies": {
+    "@substrate-system/kebab-case": "^0.0.0"
+  },
   "devDependencies": {
-    "@bicycle-codes/debug": "^0.7.2",
-    "@bicycle-codes/dom": "^0.1.0",
-    "@bicycle-codes/tapzero": "^0.10.0",
+    "@substrate-system/debug": "^0.9.2",
+    "@substrate-system/dom": "^0.1.7",
+    "@substrate-system/tapzero": "^0.10.15",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "auto-changelog": "^2.4.0",
@@ -93,8 +103,5 @@
   "bugs": {
     "url": "https://github.com/substrate-system/icons/issues"
   },
-  "homepage": "https://github.com/substrate-system/icons#readme",
-  "dependencies": {
-    "@substrate-system/kebab-case": "^0.0.0"
-  }
+  "homepage": "https://github.com/substrate-system/icons"
 }
