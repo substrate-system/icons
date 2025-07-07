@@ -1,4 +1,4 @@
-import { githubLogo } from './ssr.js'
+import { githubLogo } from './render/github-logo.js'
 
 // for docuement.querySelector
 declare global {
