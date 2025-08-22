@@ -1,4 +1,4 @@
-import { type Attrs } from '@substrate-system/web-component/util'
+import { type Attrs } from '@substrate-system/web-component/attributes'
 
 export function createRenderer (
     createHtml:(attrs?:Attrs)=>string,
