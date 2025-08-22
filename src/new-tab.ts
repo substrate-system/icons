@@ -1,3 +1,4 @@
+import { define as _define } from '@substrate-system/web-component/util'
 import { render as renderNewTab } from './render/new-tab.js'
 
 export class NewTab extends HTMLElement {
@@ -38,4 +39,8 @@ export class NewTab extends HTMLElement {
 
 export function register () {
     customElements.define(NewTab.TAG_NAME, NewTab)
+}
+
+export function define () {
+    _define(NewTab.TAG_NAME, NewTab)
 }

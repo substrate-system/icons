@@ -1,3 +1,4 @@
+import { define as _define } from '@substrate-system/web-component/util'
 import { render } from './render/eye-regular.js'
 
 export class EyeRegular extends HTMLElement {
@@ -38,4 +39,8 @@ export class EyeRegular extends HTMLElement {
 
 export function register () {
     customElements.define(EyeRegular.TAG, EyeRegular)
+}
+
+export function define () {
+    _define(EyeRegular.TAG, EyeRegular)
 }

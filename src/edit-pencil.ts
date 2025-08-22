@@ -1,3 +1,4 @@
+import { define as _define } from '@substrate-system/web-component/util'
 import { render as renderEditPencil } from './render/edit-pencil.js'
 
 export class EditPencil extends HTMLElement {
@@ -13,7 +14,7 @@ export class EditPencil extends HTMLElement {
     /**
      * Only watching for 'title'.
      */
-    attributeChangedCallback (_name: string, _oldValue: string, newValue: string) {
+    attributeChangedCallback (_name:string, _oldValue:string, newValue:string) {
         this._title = newValue
         this.render()
     }
@@ -36,6 +37,6 @@ export class EditPencil extends HTMLElement {
     }
 }
 
-export function register () {
-    customElements.define(EditPencil.TAG_NAME, EditPencil)
+export function define () {
+    _define(EditPencil.TAG_NAME, EditPencil)
 }

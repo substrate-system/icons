@@ -1,3 +1,6 @@
+import { define as _define } from '@substrate-system/web-component/util'
+import { render as renderLogOut } from './render/log-out.js'
+
 export class LogOut extends HTMLElement {
     static observedAttributes: string[] = ['title']
     static TAG_NAME = 'log-out'
@@ -36,4 +39,8 @@ export class LogOut extends HTMLElement {
 
 export function register () {
     customElements.define(LogOut.TAG_NAME, LogOut)
+}
+
+export function define () {
+    _define(LogOut.TAG_NAME, LogOut)
 }

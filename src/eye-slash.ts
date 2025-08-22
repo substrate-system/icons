@@ -1,3 +1,4 @@
+import { define as _define } from '@substrate-system/web-component/util'
 import { eyeSlash as render } from './render/eye-slash'
 
 export class EyeSlash extends HTMLElement {
@@ -37,4 +38,8 @@ export class EyeSlash extends HTMLElement {
 
 export function register () {
     customElements.define(EyeSlash.TAG, EyeSlash)
+}
+
+export function define () {
+    _define(EyeSlash.TAG, EyeSlash)
 }

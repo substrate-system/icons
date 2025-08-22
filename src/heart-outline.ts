@@ -1,3 +1,4 @@
+import { define as _define } from '@substrate-system/web-component/util'
 import { render } from './render/heart.js'
 
 // for docuement.querySelector
@@ -28,5 +29,9 @@ export class HeartOutline extends HTMLElement {
 
 export function register () {
     customElements.define(HeartOutline.TAG, HeartOutline)
+}
+
+export function define () {
+    _define(HeartOutline.TAG, HeartOutline)
 }
 
