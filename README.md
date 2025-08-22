@@ -16,19 +16,19 @@ Icons as web components.
 
 <!-- toc -->
 
-- [install](#install)
-- [components](#components)
+- [Install](#install)
+- [Components](#components)
 - [Modules](#modules)
   * [ESM](#esm)
   * [Common JS](#common-js)
-- [use](#use)
+- [Use](#use)
   * [SSR](#ssr)
-  * [tag names](#tag-names)
-  * [register](#register)
+  * [Tag Names](#tag-names)
+  * [Define](#define)
   * [JS](#js)
   * [Attributes](#attributes)
   * [HTML](#html)
-  * [pre-built JS](#pre-built-js)
+  * [Pre-built JS](#pre-built-js)
 - [See Also](#see-also)
 - [Credits](#credits)
 
@@ -36,13 +36,13 @@ Icons as web components.
 
 </details>
 
-## install
+## Install
 
 ```sh
 npm i -S @substrate-system/icons
 ```
 
-## components
+## Components
 
 Visible in the [src folder](./src/), the filename corresponds to the default
 component name.
@@ -54,6 +54,11 @@ all components with names.
 * `@substrate-system/icons/eye-slash`
 * `@substrate-system/icons/edit-square`
 * `@substrate-system/icons/edit-pencil`
+* `@substrate-system/icons/save-cloud`
+* `@substrate-system/icons/log-out`
+* `@substrate-system/icons/new-tab`
+* `@substrate-system/icons/heart-outline`
+* `@substrate-system/icons/github-logo`
 
 
 ## Modules
@@ -70,13 +75,13 @@ import '@substrate-system/icons/eye-regular'
 require('@substrate-system/icons/eye-regular')
 ```
 
-## use
+## Use
 In the interest of interoperability, **we do not define any components**, you
-will need to call `customElements.define('comonent-name', ComponentClass)`
+will need to call `customElements.define('component-name', ComponentClass)`
 yourself:
 
 ```js
-import { EditSquare } from '@substrate-sustem/icons'
+import { EditSquare } from '@substrate-system/icons'
 
 customElements.define('component-name', EditSquare)
 ```
@@ -91,35 +96,35 @@ import { githubLogo } from '@substrate-system/icons/ssr'
 const html = githubLogo()
 ```
 
-### tag names
+### Tag Names
 The default tag name is exposed as `TAG` static property on each class.
 You can override this property to set something custom.
 ```js
-import { register, EditSquare } from '@substrate-system/icons/eye-regular'
+import { define, EditSquare } from '@substrate-system/icons/eye-regular'
 
-EditSquare.TAG = 'exmaple-name'
-register()
+EditSquare.TAG = 'example-name'
+define()
 
 // now use it like `<example-name />`
 ```
 
-### register
+### Define
 
-Or call the helper function, `regiser`:
+Or call the helper function, `define`:
 ```js
-import { register } from '@substrate-system/icons'
+import { define } from '@substrate-system/icons'
 
 // this will load and register all components,
 // using the default component names
-register()
+define()
 ```
 
 Or register components individually, with the default names:
 ```js
-import { regiser } from '@substrate-system/icons/edit-pencil'
+import { define } from '@substrate-system/icons/edit-pencil'
 
 // this will register with the default component name, 'edit-pencil'
-register()
+define()
 ```
 
 See [the `isRegistered`](https://github.com/substrate-system/web-component#isregistered)
@@ -141,11 +146,11 @@ it will render with a default `title`.
 </div>
 ```
 
-### pre-built JS
+### Pre-built JS
 This package exposes minified JS files too. Copy them to a location that is
 accessible to your web server, then link to them in HTML.
 
-#### copy
+#### Copy
 ```sh
 cp ./node_modules/@substrate-system/icons/dist/eye-regular.min.js ./public
 ```
