@@ -2,7 +2,7 @@
   "name": "@substrate-system/icons",
   "description": "Icons as web components",
   "type": "module",
-  "version": "0.1.23",
+  "version": "0.1.24",
   "main": "dist/index.js",
   "files": [
     "./dist/*"
