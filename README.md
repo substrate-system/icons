@@ -96,21 +96,9 @@ import { githubLogo } from '@substrate-system/icons/ssr'
 const html = githubLogo()
 ```
 
-### Tag Names
-The default tag name is exposed as `TAG` static property on each class.
-You can override this property to set something custom.
-```js
-import { define, EditSquare } from '@substrate-system/icons/eye-regular'
-
-EditSquare.TAG = 'example-name'
-define()
-
-// now use it like `<example-name />`
-```
-
 ### Define
 
-Or call the helper function, `define`:
+Call the helper function, `define`:
 ```js
 import { define } from '@substrate-system/icons'
 
@@ -136,6 +124,7 @@ import '@substrate-system/icons/eye-regular'
 ```
 
 ### Attributes
+
 Pass in a `title` attribute to change the `svg` title. If `title` is omitted,
 it will render with a default `title`.
 
