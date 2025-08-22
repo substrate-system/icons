@@ -37,10 +37,6 @@ export class LogOut extends HTMLElement {
     }
 }
 
-export function register () {
-    customElements.define(LogOut.TAG_NAME, LogOut)
-}
-
 export function define () {
     _define(LogOut.TAG_NAME, LogOut)
 }

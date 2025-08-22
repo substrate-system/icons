@@ -37,10 +37,6 @@ export class SaveCloud extends HTMLElement {
     }
 }
 
-export function register () {
-    customElements.define(SaveCloud.TAG_NAME, SaveCloud)
-}
-
 export function define () {
     _define(SaveCloud.TAG_NAME, SaveCloud)
 }

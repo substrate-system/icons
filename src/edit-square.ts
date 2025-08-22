@@ -35,10 +35,6 @@ export class EditSquare extends HTMLElement {
     }
 }
 
-export function register () {
-    customElements.define(EditSquare.TAG_NAME, EditSquare)
-}
-
 export function define () {
     _define(EditSquare.TAG_NAME, EditSquare)
 }

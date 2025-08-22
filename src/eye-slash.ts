@@ -36,10 +36,6 @@ export class EyeSlash extends HTMLElement {
     }
 }
 
-export function register () {
-    customElements.define(EyeSlash.TAG, EyeSlash)
-}
-
 export function define () {
     _define(EyeSlash.TAG, EyeSlash)
 }

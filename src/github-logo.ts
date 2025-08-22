@@ -27,10 +27,6 @@ export class GithubLogo extends HTMLElement {
     }
 }
 
-export function register () {
-    customElements.define(GithubLogo.TAG, GithubLogo)
-}
-
 export function define () {
     _define(GithubLogo.TAG, GithubLogo)
 }

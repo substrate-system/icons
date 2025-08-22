@@ -37,10 +37,6 @@ export class EyeRegular extends HTMLElement {
     }
 }
 
-export function register () {
-    customElements.define(EyeRegular.TAG, EyeRegular)
-}
-
 export function define () {
     _define(EyeRegular.TAG, EyeRegular)
 }

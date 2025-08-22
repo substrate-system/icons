@@ -37,10 +37,6 @@ export class NewTab extends HTMLElement {
     }
 }
 
-export function register () {
-    customElements.define(NewTab.TAG_NAME, NewTab)
-}
-
 export function define () {
     _define(NewTab.TAG_NAME, NewTab)
 }
