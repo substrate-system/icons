@@ -1,8 +1,10 @@
+import { type Attrs } from '@substrate-system/web-component/util'
+
 export function createRenderer (
-    createHtml:(attrs?:Record<string, string|boolean>)=>string,
+    createHtml:(attrs?:Attrs)=>string,
     tag:string
 ) {
-    return function (attrs?:Record<string, string|boolean>):string {
+    return function (attrs?:Attrs):string {
         const html = createHtml(attrs)
 
         // running in node?

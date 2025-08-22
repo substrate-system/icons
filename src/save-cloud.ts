@@ -1,3 +1,4 @@
+import { define as _define } from '@substrate-system/web-component/util'
 import { render as renderSaveCloud } from './render/save-cloud.js'
 
 export class SaveCloud extends HTMLElement {
@@ -38,5 +39,9 @@ export class SaveCloud extends HTMLElement {
 
 export function register () {
     customElements.define(SaveCloud.TAG_NAME, SaveCloud)
+}
+
+export function define () {
+    _define(SaveCloud.TAG_NAME, SaveCloud)
 }
 

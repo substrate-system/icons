@@ -5,12 +5,10 @@
 [![semantic versioning](https://img.shields.io/badge/semver-2.0.0-blue?logo=semver&style=flat-square)](https://semver.org/)
 [![install size](https://flat.badgen.net/packagephobia/install/@substrate-system/icons?cache-control=no-cache)](https://packagephobia.com/result?p=@substrate-system/icons)
 [![GZip size](https://flat.badgen.net/bundlephobia/minzip/@substrate-system/icons?color=green)](https://bundlephobia.com/package/@substrate-system/icons)
-[![license](https://img.shields.io/badge/license-Polyform_Small_Business-249fbc?style=flat-square)](LICENSE)
+[![license](https://img.shields.io/badge/license-Big_Time-blue?style=flat-square)](LICENSE)
+
 
 Icons as web components.
-
-This package **does not register component names**. See
-[the *use* section](#use) for more information.
 
 **See [a live demonstration](https://substrate-system.github.io/icons/)**.
 

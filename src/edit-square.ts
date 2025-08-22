@@ -1,3 +1,4 @@
+import { define as _define } from '@substrate-system/web-component/util'
 import { render as renderEditSquare } from './render/edit-square.js'
 export class EditSquare extends HTMLElement {
     static TAG_NAME = 'edit-square'
@@ -36,4 +37,8 @@ export class EditSquare extends HTMLElement {
 
 export function register () {
     customElements.define(EditSquare.TAG_NAME, EditSquare)
+}
+
+export function define () {
+    _define(EditSquare.TAG_NAME, EditSquare)
 }
