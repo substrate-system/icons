@@ -1,8 +1,8 @@
-import { register } from '../src/index.js'
+import { define } from '../src/index.js'
 import './index.css'
 import '../src/index.css'
 
-register()
+define()
 
 document.body.innerHTML += `
     <div class="icons-demo">
