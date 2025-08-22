@@ -23,7 +23,6 @@ Icons as web components.
   * [Common JS](#common-js)
 - [Use](#use)
   * [SSR](#ssr)
-  * [Tag Names](#tag-names)
   * [Define](#define)
   * [JS](#js)
   * [Attributes](#attributes)
