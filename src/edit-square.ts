@@ -1,7 +1,14 @@
 import { define as _define } from '@substrate-system/web-component/util'
 import { render as renderEditSquare } from './render/edit-square.js'
+
+// for document.querySelector
+declare global {
+    interface HTMLElementTagNameMap {
+        'edit-square': EditSquare
+    }
+}
 export class EditSquare extends HTMLElement {
-    static TAG_NAME = 'edit-square'
+    static TAG = 'edit-square'
     _title: string
 
     constructor () {
@@ -36,5 +43,5 @@ export class EditSquare extends HTMLElement {
 }
 
 export function define () {
-    _define(EditSquare.TAG_NAME, EditSquare)
+    _define(EditSquare.TAG, EditSquare)
 }

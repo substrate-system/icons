@@ -1,6 +1,13 @@
 import { define as _define } from '@substrate-system/web-component/util'
 import { eyeSlash as render } from './render/eye-slash'
 
+// for document.querySelector
+declare global {
+    interface HTMLElementTagNameMap {
+        'eye-slash': EyeSlash
+    }
+}
+
 export class EyeSlash extends HTMLElement {
     static TAG = 'eye-slash'
     _title:string

@@ -1,9 +1,16 @@
 import { define as _define } from '@substrate-system/web-component/util'
 import { render as renderSaveCloud } from './render/save-cloud.js'
 
+// for document.querySelector
+declare global {
+    interface HTMLElementTagNameMap {
+        'save-cloud': SaveCloud
+    }
+}
+
 export class SaveCloud extends HTMLElement {
     static observedAttributes: string[] = ['title']
-    static TAG_NAME = 'save-cloud'
+    static TAG = 'save-cloud'
     _title: string
 
     constructor () {
@@ -38,6 +45,6 @@ export class SaveCloud extends HTMLElement {
 }
 
 export function define () {
-    _define(SaveCloud.TAG_NAME, SaveCloud)
+    _define(SaveCloud.TAG, SaveCloud)
 }
 

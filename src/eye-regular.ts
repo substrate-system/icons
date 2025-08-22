@@ -1,6 +1,13 @@
 import { define as _define } from '@substrate-system/web-component/util'
 import { render } from './render/eye-regular.js'
 
+// for document.querySelector
+declare global {
+    interface HTMLElementTagNameMap {
+        'eye-regular': EyeRegular
+    }
+}
+
 export class EyeRegular extends HTMLElement {
     static TAG = 'eye-regular'
     _title:string

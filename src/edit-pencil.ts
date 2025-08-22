@@ -1,9 +1,16 @@
 import { define as _define } from '@substrate-system/web-component/util'
 import { render as renderEditPencil } from './render/edit-pencil.js'
 
+// for document.querySelector
+declare global {
+    interface HTMLElementTagNameMap {
+        'edit-pencil': EditPencil
+    }
+}
+
 export class EditPencil extends HTMLElement {
     static observedAttributes: string[] = ['title']
-    static TAG_NAME = 'edit-pencil'
+    static TAG = 'edit-pencil'
     _title: string
 
     constructor () {
@@ -38,5 +45,5 @@ export class EditPencil extends HTMLElement {
 }
 
 export function define () {
-    _define(EditPencil.TAG_NAME, EditPencil)
+    _define(EditPencil.TAG, EditPencil)
 }

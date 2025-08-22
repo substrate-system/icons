@@ -1,9 +1,16 @@
 import { define as _define } from '@substrate-system/web-component/util'
 import { render as renderLogOut } from './render/log-out.js'
 
+// for document.querySelector
+declare global {
+    interface HTMLElementTagNameMap {
+        'log-out': LogOut
+    }
+}
+
 export class LogOut extends HTMLElement {
     static observedAttributes: string[] = ['title']
-    static TAG_NAME = 'log-out'
+    static TAG = 'log-out'
     _title: string
 
     constructor () {
@@ -38,5 +45,5 @@ export class LogOut extends HTMLElement {
 }
 
 export function define () {
-    _define(LogOut.TAG_NAME, LogOut)
+    _define(LogOut.TAG, LogOut)
 }

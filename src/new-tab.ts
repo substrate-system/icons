@@ -1,9 +1,16 @@
 import { define as _define } from '@substrate-system/web-component/util'
 import { render as renderNewTab } from './render/new-tab.js'
 
+// for document.querySelector
+declare global {
+    interface HTMLElementTagNameMap {
+        'new-tab': NewTab
+    }
+}
+
 export class NewTab extends HTMLElement {
     static observedAttributes: string[] = ['title']
-    static TAG_NAME = 'new-tab'
+    static TAG = 'new-tab'
     _title: string
 
     constructor () {
@@ -38,5 +45,5 @@ export class NewTab extends HTMLElement {
 }
 
 export function define () {
-    _define(NewTab.TAG_NAME, NewTab)
+    _define(NewTab.TAG, NewTab)
 }
