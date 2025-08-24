@@ -22,3 +22,6 @@ function createHtml ({ title }:{ title?:string } = {}) {
     return html
 }
 
+export function outerHtml ({ title }:{ title?:string }) {
+    return `<eye-regular>${render({ title })}</eye-regular>`
+}

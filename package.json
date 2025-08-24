@@ -9,7 +9,8 @@
   ],
   "scripts": {
     "lint": "eslint \"./**/*.{ts,js}\"",
-    "test": "esbuild test/index.ts --target=es2020 --bundle --keep-names | tapout",
+    "test": "npm run test:browser && npm run test-node",
+    "test:browser": "esbuild test/index.ts --target=es2020 --bundle --keep-names | tapout",
     "test-node": "esbuild --bundle ./test/node.ts | node | tap-spec",
     "build-css": "postcss src/index.css --use postcss-nesting > dist/style.css",
     "build-css:min": "postcss src/index.css --use cssnano postcss-nesting > dist/style.min.css",

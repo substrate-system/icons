@@ -20,3 +20,7 @@ function createHtml () {
         </g>
     </svg>`
 }
+
+export function outerHtml () {
+    return `<heart-outline>${render()}</heart-outline>`
+}

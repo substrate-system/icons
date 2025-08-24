@@ -23,3 +23,7 @@ export const githubLogo = function ():string {
 }
 
 githubLogo.TAG = 'github-logo'
+
+export function outerHtml () {
+    return `<github-logo>${githubLogo()}</github-logo>`
+}
