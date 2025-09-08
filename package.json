@@ -63,7 +63,7 @@
   },
   "dependencies": {
     "@substrate-system/kebab-case": "^0.0.0",
-    "@substrate-system/web-component": "^0.0.35"
+    "@substrate-system/web-component": "^0.0.36"
   },
   "devDependencies": {
     "@substrate-system/debug": "^0.9.2",
